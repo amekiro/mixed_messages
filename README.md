@@ -14,7 +14,7 @@ This project is focused on JavaScript usage.
 3. Upon running the comman, a title should appear with "Story: ". Underneath that, a randomly generated story should be written out.
 
 ## Required information
-Required information to run the JavaScript code are stored in the following arrays:
+Required information to run the JavaScript code are stored in the following arrays (December 26, 2021 update: arrays within an object):
 
 - noun: Nouns are listed in the array as an array with the following variations:
     - singular
@@ -26,7 +26,7 @@ Required information to run the JavaScript code are stored in the following arra
 - adj: Adjectives are listed in the array as an array with the following variations:
     - dictionary form (default)
     - comparison (est)
-- adv: Adverbs do not have a variation, and thus are listed as a single array
+- adv: Adverbs do not have a variation, and thus are listed as a single array (December 26, 2021 update: In order to make updates easier should a variation of an adverb be used, each word has been added to its own array)
 
 For nouns, verbs and adjections, the matrix array allows for additions should a mad lib need a variation not currently listed.
 
@@ -36,10 +36,16 @@ Upon running $node mixed_messages_script.js, the following steps are run:
 1. An array of stories are created
 
     A. Depending on the number of nouns, verbs, adjectives and adverbs requested, storyFac will either generate lists of random words or alert the user that there are not enough words in the word bank to create the story.
+
     B. Words are added to the anonymous function that is referenced in storyFac.
+    
 2. Array of stories is filtered to remove unsuccessful stories.
 3. Random index is created based on the number of successful stories.
 4. A random story is printed to the console.
+
+## Updates
+- December 26, 2021
+    - In order to allow flexibility for additional word types in newer mad libs, the nouns, verbs, adjectives and adverbs have been added into a single object. This removes the need for them to use their own parameters in the storyFac and storyFun functions. Instead, an object with corresponding numbers or words repectively would be used, allowing easy additions for word types
 
 ## Task List
 1. Plan project objectives and timeline - COMPLETE
